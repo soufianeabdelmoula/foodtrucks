@@ -1,0 +1,23 @@
+.container {
+  max-width: 600px;
+  margin: auto;
+}
+
+.contact-info {
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  background-color: #f9f9f9;
+}
+
+h2 {
+  text-align: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px; /* Optionnel : espace au-dessus du bouton */
+}
+

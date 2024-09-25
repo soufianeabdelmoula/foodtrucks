@@ -1,0 +1,11 @@
+<div class="container mt-4">
+  <h2 class="header-title">Créer un Food Truck</h2>
+  <form (ngSubmit)="onSubmit(foodTruckForm)"  #foodTruckForm="ngForm">
+    <mat-form-field appearance="fill" class="w-100">
+      <mat-label>Food Truck</mat-label>
+      <input matInput [(ngModel)]="foodTruck.name" name="name" required>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="!foodTruckForm.valid">Soumettre</button>
+  </form>
+</div>

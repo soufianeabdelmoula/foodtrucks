@@ -1,0 +1,41 @@
+.container {
+  margin: 20px auto;
+  max-width: 800px;
+}
+
+.mat-form-field {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-header-cell {
+  background-color: #f1f1f1;
+  font-weight: bold;
+}
+
+.mat-cell {
+  transition: background-color 0.3s;
+}
+
+/* Styles pour le fond alterné des lignes */
+.mat-row:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.mat-row:nth-child(odd) {
+  background-color: #e0e0e0;
+}
+
+/* Supprime le changement de couleur au survol */
+.mat-row:hover {
+  background-color: inherit;
+}
+.header-title {
+  color: #FFD700;
+  font-size: 24px;
+  margin-bottom: 20px;
+}

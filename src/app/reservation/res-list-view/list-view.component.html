@@ -1,0 +1,25 @@
+<div class="container mt-4">
+  <h2 class="header-title">La list des réservations :</h2>
+
+
+
+  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!-- Date Column -->
+    <ng-container matColumnDef="date">
+      <th mat-header-cell *matHeaderCellDef> Date : </th>
+      <td mat-cell *matCellDef="let reservation"> {{ reservation.date | date: 'shortDate' }} </td>
+    </ng-container>
+
+    <!-- Name Column -->
+    <ng-container matColumnDef="name">
+      <th mat-header-cell *matHeaderCellDef> Nom : </th>
+      <td mat-cell *matCellDef="let reservation"> {{ reservation.name }} </td>
+    </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <mat-paginator [length]="totalReservations" [pageSize]="20" (page)="onPageChange($event)"></mat-paginator>
+</div>

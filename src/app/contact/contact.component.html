@@ -1,0 +1,34 @@
+<div class="container mt-4">
+  <h2>Contactez-nous</h2>
+  <div class="contact-info">
+    <h3>Notre bureau</h3>
+    <p><strong>Adresse :</strong> 123 Food Truck Lane, Bordeaux City, FT 12345</p>
+    <p><strong>Téléphone :</strong> (33) 456-7890</p>
+    <p><strong>Email :</strong> contact@foodtrucks.com</p>
+  </div>
+
+  <h2>Envoyez-nous un message</h2>
+
+
+  <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+    <mat-form-field appearance="fill" style="margin-right: 175px; width: 100%">
+      <mat-label>Nom :</mat-label>
+      <input matInput required [(ngModel)]="contact.name" name="name">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" style=" width: 100%">
+      <mat-label>Email :</mat-label>
+      <input matInput required email [(ngModel)]="contact.email" name="email">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill"  style="margin-right: 35%; width: 100%">
+      <mat-label>Message :</mat-label>
+      <textarea matInput required [(ngModel)]="contact.message" name="message" ></textarea>
+    </mat-form-field>
+
+    <div class="button-container">
+      <button mat-raised-button color="primary" type="submit" [disabled]="!contactForm.form.valid">Soumettre</button>
+    </div>  </form>
+
+
+</div>

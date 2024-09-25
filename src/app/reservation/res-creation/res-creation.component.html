@@ -1,0 +1,24 @@
+<div class="container mt-4">
+  <h2 class="header-title">Créer une réservation</h2>
+  <form (ngSubmit)="onSubmit(reservationForm)" #reservationForm="ngForm">
+    <div class="form-group">
+      <mat-form-field appearance="fill">
+        <mat-label>Choisir une date</mat-label>
+        <input matInput [matDatepicker]="picker" [(ngModel)]="reservation.date" name="date" required>
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+    </div>
+
+    <div class="form-group">
+      <mat-form-field appearance="fill" class="w-100">
+        <mat-label>Foodtruck</mat-label>
+        <mat-select [(ngModel)]="reservation.name" name="option" required>
+          <mat-option *ngFor="let foodTruck of foodTruckList" value="{{foodTruck.name}}">{{foodTruck.name}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+
+    <button mat-raised-button color="primary" type="submit" [disabled]="!reservationForm.valid">Soumettre</button>
+  </form>
+</div>
